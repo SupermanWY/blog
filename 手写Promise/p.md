@@ -1,9 +1,8 @@
 ## 前言
 都 2020 年了，Promise 大家肯定都在用了，但是估计很多人对其原理还是一知半解，今天就让我们一起实现一个符合 PromiseA+ 规范的 Promise。
-附规范地址 PromiseA+ 规范
 
 ## 简单版
-我们都知道 Promise 的调用方式，new Promise(executor)， executor 两个参数，resolve，reject。所以现在我们的代码长这样
+我们都知道 Promise 的调用方式，**new Promise(executor)**， executor 两个参数，resolve，reject。所以现在我们的代码长这样
 ```javaScript
 class Promise {
     constructor(executor) {
@@ -51,7 +50,7 @@ class Promise {
     }
 }
 ```
-现在我们的 Promise 已经出不实现了，但还有很多问题
+现在我们的 Promise 已经初步实现了，但还有很多问题
 
 一个 promise 可以调用多次 then 方法，也就是说可以注册多个回调，所以我们需要一个队列来保存这些回调。同时我们没有对 pending 状态的 then 方法做处理，当 promise 为 pending 状态时，then 方法应该将回调放入到队列当中，而不是直接运行。所以改进之后的代码如下。
 
@@ -324,7 +323,7 @@ class Promise {
 }
 ```
 
-测试工具
+#### 测试工具
 给大家推荐一个测试 promise 是否规范的工具 --- promises-aplus-tests，使用方法如下
 全局安装 promises-aplus-tests，然后添加以下代码
 
@@ -343,6 +342,8 @@ module.exports = Promise
 然后直接在在控制台运行 promises-aplus-tests <当前 promise 代码地址>
 
 可以看到我们的 promise 是顺利通过测试的。
+![image.png](https://upload-images.jianshu.io/upload_images/10480647-2d749e45e19b2f50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ## 总结
 希望这篇文章可以帮助大家更深入的理解 promise
