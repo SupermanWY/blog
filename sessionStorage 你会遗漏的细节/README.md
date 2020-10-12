@@ -38,7 +38,9 @@
 </script>
 ```
 
-![](https://imgkr2.cn-bj.ufileos.com/f0e34011-3d14-4ca4-9392-cf598c482954.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=XI4UCenCaoYQsLkShAyGABKwYBg%253D&Expires=1599668490)
+
+![](https://imgkr2.cn-bj.ufileos.com/2ea54297-ff85-4c43-8e22-b1486836a8f6.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=gT5Qu3JJgjxmDrFkT3S5%252BwP0mEQ%253D&Expires=1602565927)
+
 
 
 在页面 1 内存入 sessionStorage test，然后，我们再通过 a 标签打开一个新的标签页
@@ -54,7 +56,8 @@
 </script>
 ```
 
-![](https://imgkr2.cn-bj.ufileos.com/803f3bf7-c5fd-431b-8c49-717c25c3d8d7.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=SfxDB4CDEDgBwtVMzwubSWv55N8%253D&Expires=1599668651)
+![](https://imgkr2.cn-bj.ufileos.com/7a885fcc-216f-4fd4-90e4-0ba6892cb93e.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=aW4iWUPsZku8WSsxI%252FdpzjYHfhA%253D&Expires=1602566015)
+
 
 在页面 2 内打印 ```sessionStorage.getItem('test')```，我们此时发现能够拿到 test。
 
@@ -76,12 +79,16 @@
 页面 2 内 sessionStorate 存入 test2，然后从页面 2 进入页面 3
 
 然后我们可以发现页面 3 内也可以拿到 test2
-![](https://imgkr2.cn-bj.ufileos.com/09adba99-1563-4edc-bf93-e10d38f14bdf.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=HA0QoTHB%252F1d%252BXEa0nvg7E7OAf2E%253D&Expires=1599669638)
+
+![](https://imgkr2.cn-bj.ufileos.com/ffbf3281-4423-49fb-a2df-4fe18df79c3a.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=UiAHPRo6HXviQdPapjb1%252BmIo0EE%253D&Expires=1602566037)
+
 
 所以顶级并不是我们所理解的那样，看起来就是父级的意思。。。
 
 我们此时再想一下，页面 2 内存入了 test2，那么此时页面 1 内是否可以获取？
-![](https://imgkr2.cn-bj.ufileos.com/0eb77ea5-d751-460c-a4f7-219bb9b67d2b.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=Y1lygbc0ePP2g%252Fg0Go%252BozUJH1RQ%253D&Expires=1599669825)
+
+![](https://imgkr2.cn-bj.ufileos.com/02a5d1a2-5d85-439d-b86a-629f472c1a6d.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=BHeWAOqBGkgVpczF0TGZd4%252FWXBk%253D&Expires=1602566053)
+
 
 事实证明不可以。
 
