@@ -21,7 +21,8 @@
 
 如下图所示，一个每个方格即是 1 位，8 个方格即是 一个字节。
 
-![](https://imgkr2.cn-bj.ufileos.com/7669e013-73f3-4bfd-b7ed-c6111cb38876.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=p1CYvrv%252F4w6Tfo%252F4qUIiN754Leg%253D&Expires=1600788823)
+![](https://imgkr2.cn-bj.ufileos.com/c9e7562f-6774-4f38-b927-2b78cbe6ebe4.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=fN8WqL991Pw%252FC4hMWe9IjTeQrxQ%253D&Expires=1602565083)
+
 
 原谅我这丑陋的画图技术。
 
@@ -33,7 +34,8 @@
 
 以 10 进制为例：数字 8 转换为 2进制为 *1 0 0 0* ， 其存储结构大概如下图所示。
 
-![](https://imgkr2.cn-bj.ufileos.com/45ca7110-ab96-4a0a-a188-324a09a8d16b.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=1Ku6YIkXKwRGru10czC%252BaIyDxMM%253D&Expires=1600790296)
+![](https://imgkr2.cn-bj.ufileos.com/e6cd7d99-a779-4947-81e4-d4aa0ca5c130.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=ARrUj5AVaBv0Wpx4Zf6DU7BpoHs%253D&Expires=1602565106)
+
 
 一个基本存储单元为 1 字节即 8 位，而这里只有 4 位，空余 4 位都补 0.
 
@@ -45,7 +47,9 @@
 
 ASCII 表如下图所示：
 
-![](https://imgkr2.cn-bj.ufileos.com/8bd0899c-06a7-4424-b9f4-6af826dd0c99.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=0rt47OvFE980a2ZPovUkfOQKVrk%253D&Expires=1600790781)、
+
+![](https://imgkr2.cn-bj.ufileos.com/25f24eba-e4a2-4ce2-a26f-db70be191b33.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=ufFqJvZOygBtOSR6efgIiZC85l0%253D&Expires=1602565125)
+
 
 举个例子：
 
