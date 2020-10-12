@@ -46,7 +46,9 @@ Node.js 采用单线程模式，这也良好的适用了单线程非阻塞的模
 
 下面是一张来自官网的事件循环的描述图。
 
-![](https://imgkr2.cn-bj.ufileos.com/993cb9ba-1f9b-46c3-8a3e-1dfb41c53cca.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=GG4TZIMdF0UHtjxoOSSTffulzek%253D&Expires=1600094639)
+
+![](https://gitee.com/wangyueee/tuchuang/raw/master/2020-10-11/1602424192675-image.png)
+
 
 事件循环官网介绍的非常清楚，我这里把官网的内容搬运过来。
 
