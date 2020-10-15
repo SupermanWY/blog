@@ -80,7 +80,7 @@ const readFile = (path, options, cb) => {
   })
 }
 
-readFile('../a.js', (err, data) => {console.log(111, data)})
+// readFile('../a.js', (err, data) => {console.log(111, data)})
 // fs.readFile('../a.js', {encoding: 'utf-8'},function(err, file){console.log(123123, file)})
 
 const writeFile = (file, data, options, cb) => {
@@ -135,7 +135,7 @@ const _writeFile = (fd, data, cb) => {
 
 
 // writeFile('./w-test2.js', '221111f', (err) => {console.log(err)})
-fs.writeFile('./w-test3.js', Buffer.from('123'), (err) => {console.log(err)})
+// fs.writeFile('./w-test3.js', Buffer.from('123'), (err) => {console.log(err)})
 
 const appendFile = (path, data, options, cb) => {
   cb = maybeCallback(cb || options)
@@ -148,8 +148,8 @@ const appendFile = (path, data, options, cb) => {
   writeFile(path, data, options, cb)
 }
 
-appendFile('./w-test2.js', '1', (err) => {console.log(err)})
-fs.appendFile('./w-test2.js', '1', (err) => {console.log(err)})
+// appendFile('./w-test2.js', '1', (err) => {console.log(err)})
+// fs.appendFile('./w-test2.js', '1', (err) => {console.log(err)})
 
 const copyFile = (target, source, cb) => {
   cb = maybeCallback(cb)
@@ -190,5 +190,9 @@ const copyFile = (target, source, cb) => {
   })
 }
 
-copyFile('./w-test.js', './w-test1.js', (err) => consoler.error(err))
+// copyFile('./w-test.js', './w-test1.js', (err) => consoler.error(err))
 
+fs.open('./w-test.js', 0o666, (err, fd) => {
+  console.log(err)
+  console.log(fd)
+})
