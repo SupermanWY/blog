@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <form> -->
+    <p>text: <input name="text" type="text"></p>
+    <p>file: <input name="file" type="file" id="fileInput"></p>
+    <p><button type="button" id="submit">提交</button></p>
+  <!-- </form> -->
+</body>
+</html>
+
+<script>
+  const formData = new FormData()
+  formData.append('text', 'aa')
+
+  fileInput.addEventListener('change', (e) => {
+    console.log(fileInput.files);
+    const file = fileInput.files[0]
+    formData.append(file.name, file)
+  })
+  submit.addEventListener('click', () => {
+    const xhr = new XMLHttpRequest()
+    xhr.open('POST', '/file')
+    xhr.send(formData)
+  })
+</script>
