@@ -195,3 +195,7 @@ const copyFile = (target, source, cb) => {
 const a = fs.openSync('./w-test.js', 'w', 0o666)
 
 console.log(111, a)
+fs.open('./w-test.js', 0o666, (err, fd) => {
+  console.log(err)
+  console.log(fd)
+})
