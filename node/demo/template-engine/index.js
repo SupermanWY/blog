@@ -6,20 +6,41 @@ let tpl = `<!DOCTYPE html>
   <title>Document</title>
 </head>
 <body>
-  <% data.forEach(item => {) %>
+  <% arr.forEach(item => { %>
     <p>{%= item %}</p>
   <% }) %>
+
+  <%if(Array.isArray(arr)){%>
+    {%=arr%}
+  <%}%>
 </body>
 </html>`
 
-function render(template) {
-  // a = (/{%=(.+)%}/g).exec(template)
-  // console.log(a)
-  x = template.replace(/{%=(.+)%}/g, (...args) => {
-    console.log(22, args)
-    return `'${'${args[1]}'}'`
+function render(template, data) {
+  template = `
+    with(data){
+      let str = '';
+      str += \`${template}\`;
+      return str;
+    }
+  `
+  console.log(template)
+
+  template = template.replace(/{%=(.+)%}/g, (...args) => {
+    return '${' + args[1] + '}'
   })
-  console.log(x)
+
+
+  template = template.replace(/<%(.+?)%>/g, (...args) => {
+    return `\`;${args[1]}; str+=\``
+  })
+
+
+  const res = new Function('data', template)(data)
+  return res;
 }
 
-render(tpl)
+render(tpl, {
+  arr: [1, 2, 3]
+})
+
